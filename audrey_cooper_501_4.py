@@ -1,23 +1,25 @@
 # Programmer: Audrey Cooper
 # Lab Section: 502
-# Lab 1, assignment 4
-# Purpose: To take user input of a letter and determine if that input is a
-# vowel or a consonant.
+# Lab 2, assignment 4
+# Purpose: To print every number between 2 and 11 divided by the number of the
+# loop iteration
 
-# assign a to input to prompt and collect user input
-a = input("Enter a letter! ")
+# for statement to iterate through a fixed range
+for i in range(2,11):
+    # divide ranged number by loop iteration round
+    num = (1/i)
+    # print result
+    print(num)
 
-# use an if statement to iterate through the vowel choices to determine
-# if a (user input) meets the vowel requirements
-if a == "a" or a == "e" or a == "i" or a == "o" or a == "u":
-    # print vowel result
-    print("This letter is a vowel!")
-else:
-    # print consonant result
-    print("This letter is a consonant!")
-    
 '''
-Output from IDLE
-Enter a letter!a
-This letter is a vowel!
+0.5
+0.3333333333333333
+0.25
+0.2
+0.16666666666666666
+0.14285714285714285
+0.125
+0.1111111111111111
+0.1
 '''
+

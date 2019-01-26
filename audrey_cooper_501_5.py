@@ -1,26 +1,30 @@
 # Programmer: Audrey Cooper
 # Lab Section: 502
-# Lab 1, assignment 5
-# Purpose: to take user input of three numbers and add them all together if
-# none of the three numbers are the same number.
+# Lab 2, assignment 5
+# Purpose: to determine whether a number is divisible by 2 or not by using the
+# modulus operator
 
-# assign 3 variables to user input and prompt and collect user input.
-number_one = int(input("Enter a number! "))
-number_two = int(input("Enter another number! "))
-number_three = int(input("Enter one more number! "))
-
-# if statement to ensure that neither of the numbers input are the same number
-if number_one == number_two or number_one == number_three or number_two == number_three:
-     # print result if any of the numbers are the same number
-     print(0)
-else:
-     # print result if all the numbers are different 
-     print(number_one + number_two + number_three)
+# utilize a while loop to iterate though user input while 1 is true
+while(1):
+    # assign num variable to a user input 
+    num = int(input("Enter a number that is divisible by 2 please! "))
+    # use if statement to determine if number if divisible by 2
+    # modulus operator is used to determine if the remainder is 0
+    if (num%2 == 0):
+        # print success result statements
+        print("Good job!")
+        # break from loop once requirement is met
+        break
+    # else condition if mod 2 does not equal 0
+    else:
+        # print failed result statements
+        print("You fool!")
 
 '''
-Output from IDLE
-Enter a number! 3
-Enter another number! 4485
-Enter one more number! 82
-4570
+IDLE Output
+Enter a number that is divisible by 2 please! 5
+You fool!
+Enter a number that is divisible by 2 please! 6
+Good job!
 '''
+

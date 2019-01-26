@@ -1,24 +1,27 @@
 # Programmer: Audrey Cooper
-# Lab Section: 502
-# Lab 1, assignment 3
-# Purpose: To take user input (name and age) and then calculate what year the
-# user will be 100 years old, while addressing them by name in the print
-# statement output.
+# Leb Section: 502
+# Lab 2, assignment 3
+# Purpose: To assign a letter grade from an input numerical grade
 
-# assign name/age to string input to prompt and collect user input
-name = str(input("What's your name?"))
-age = int(input("How old are you?"))
+# assign grade variable to user input
+grade = int(input("Enter your grade! "))
 
-# assign years_to_onehundred variable to 100 - current age and add current year
-# to determine what year the user will be 100 years old.
-years_to_onehundred = ((100 - age) + 2018)
-
-# print results
-print(name, "you will be one hundred years old in", years_to_onehundred)
+# utilize if statement to determine the classification of letter grade
+if grade > 60:
+    if grade >= 90:
+        print("You made an A!")
+    elif grade >= 80 and grade != 90:
+        print("You made a B!")
+    elif grade >= 70 and grade != 80:
+        print("You made a C!")
+    elif grade >= 60 and grade !=70:
+        print("You made a D!")
+else:
+    # if grade is lower than 59, print failed statement.
+    print("You failed.")
 
 '''
-Output from IDLE
-What's your name? Audrey
-How old are you? 19
-Audrey you will be one hundred years old in 2099
+IDLE Output
+Enter your grade! 4
+You failed.
 '''

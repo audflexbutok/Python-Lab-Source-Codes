@@ -1,48 +1,48 @@
 # Programmer: Audrey Cooper
 # Lab Section: 502
-# Lab 1, assignment 6
-# Purpose: To create a rock, paper, scissors game using if and elif statements
-# as well as separate player input.
+# Lab 2, assignment 6
+# Purpose: To create a guessing game with the computer. The computer 'picks a
+# random number' and has the user guess what that number is.
 
-# assign player_one and player_two variables to their respective inputs
-player_one = str(input("Player 1? "))
-player_two = str(input("Player 2? "))
+# import random function to utilize random number selection
+import random
 
-# if statement for player_one input validation
-if player_one != "rock" and player_one != "paper" and player_one != "scissors":
-    print("This is not a valid input!")
-else:
-    # if statement for player_two input validation
-    if player_two != "rock" and player_two != "paper" and player_two != "scissors":
-        print("This is not a valid input!")
-    else:
-        # if and elif statement to determine the winner
-        if player_one == player_two:
-            print("Tie!")
-        elif player_one == "rock" and player_two == "paper":
-            print("Player 2 wins!")
-        elif player_one == "rock" and player_two == "scissors":
-            print("Player 1 wins!")
-        elif player_one == "paper" and player_two == "rock":
-            print("Player 1 wins!")
-        elif player_one == "paper" and player_two == "scissors":
-            print("Player 2 wins!")
-        elif player_one == "scissors" and player_two == "rock":
-            print("Player 2 wins!")
-        elif player_one == "scissors" and player_two == "paper":
-            print("Player 1 wins!")
-            
-'''
-Player 1? rock
-Player 2? paper
-Player 2 wins!
-'''
-            
-        
-        
+# assign hidden to a random integer within range 1-9
+hidden = random.randint(1,9)
 
+# assign variable count to 0 to count the number of guesses it took
+count = 0
+
+# while loop to iterate while a condition is true 
+while(1):
     
-            
-            
-        
+    # assign guess variable to user input 
+    guess = input("Enter a number between 1 and 9! (Or type exit to leave this program!)")
 
+    # add one to count in the while loop to count a guess for each iteration
+    count = count + 1
+
+    # if statement to break the loop if user types exit 
+    if (guess)== 'exit':
+        break
+    
+    # else statement that determines whether the user needs to increment
+    # or decrement their guess and then prints the result
+    else:
+        if int(guess) == hidden:
+            print("You're right!" + 'Guesses: %d' %(count))
+        elif int(guess) > hidden:
+            print("Your guess is too high!")
+        elif int(guess) < hidden:
+            print("Your guess is too low!")
+
+'''
+IDLE Output
+Enter a number between 1 and 9! (Or type exit to leave this program!) 9
+Your guess is too high!
+Enter a number between 1 and 9! (Or type exit to leave this program!) 7
+Your guess is too low!
+Enter a number between 1 and 9! (Or type exit to leave this program!) 8
+You're right!Guesses: 3
+Enter a number between 1 and 9! (Or type exit to leave this program!) exit
+'''
