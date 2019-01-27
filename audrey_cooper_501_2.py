@@ -1,40 +1,82 @@
 # Programmer: Audrey Cooper
 # Lab Section: 502
-# Lab 2, assignment 2
-# Purpose: To determine whether a year is a leap year or not
+# Lab 3, assignment 2
+# Purpose: To create a menu driven calculator
 
-# assign year variable to user input 
-year = int(input("Enter a year to find out if it's a leap year! "))
+# set calc equal to true so it runs continuously 
+calc = True
+while calc == True:
+    # adds two numbers 
+    def add(x, y):
+       return x + y
 
-# if statement to determine whether or not a year is divisible by 400
-if (year%400 == 0):
-    # print leap year results
-    print(year, "is a leap year!")
-elif(year%4 == 0)and (year%100 != 0):
-    print(year, "is a leap year!")
-else:
-    # print non leap year results if year does not meet leap requirements
-    print(year, "is not a leap year.")
-   
+    # subtracts two numbers 
+    def subtract(x, y):
+       return x - y
 
+    # multiplies two numbers
+    def multiply(x, y):
+       return x * y
+
+    # divides two numbers
+    def divide(x, y):
+       return x / y
+
+    # menu driven portion that allows user to select operation
+    print("Select operation.")
+    print("1. Add ")
+    print("2. Subtract ")
+    print("3. Multiply ")
+    print("4. Divide ")
+    print("5. Exit ")
+
+    # user input for operation choice
+    choice = input("Enter choice(1/2/3/4/5):")
+
+    # user input for number choice to perform operation
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
+
+    # statements to perform the correct operations and print their results
+    if choice == '1':
+       print(num1,"+",num2,"=", add(num1,num2))
+
+    elif choice == '2':
+       print(num1,"-",num2,"=", subtract(num1,num2))
+
+    elif choice == '3':
+       print(num1,"*",num2,"=", multiply(num1,num2))
+
+    elif choice == '4':
+       print(num1,"/",num2,"=", divide(num1,num2))
+       
+    elif choice == '5':
+                break
+    else:
+        # input validation
+        print("Invalid input")
 
 '''
-IDLE output
-Enter a year to find out if it's a leap year! 2000
-2000 is a leap year!
-
-Enter a year to find out if it's a leap year! 2012
-2012 is a leap year!
-
-Enter a year to find out if it's a leap year! 2100
-2100 is not a leap year.
+IDLE Output
+Select operation.
+1. Add 
+2. Subtract 
+3. Multiply 
+4. Divide 
+5. Exit 
+Enter choice(1/2/3/4/5):4
+Enter first number: 2
+Enter second number: 2
+2 / 2 = 1.0
+Select operation.
+1. Add 
+2. Subtract 
+3. Multiply 
+4. Divide 
+5. Exit 
+Enter choice(1/2/3/4/5):
 '''
-
-
-
-
-
-
     
-    
+
+
     

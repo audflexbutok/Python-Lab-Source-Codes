@@ -1,54 +1,61 @@
 # Programmer: Audrey Cooper
 # Lab Section: 502
-# Lab 2, assignment 1
-# Purpose: To determine the number of desks needed for an input number of
-# students in 3 classes. Two students can sit at one desk.
+# Lab 3, assignment 1
+# Purpose: To use nested loops to draw a pyrimid with asterisks
 
-# import math library to use ceiling function
-# ceiling function takes the lowest value of the floating point integer
-# in order to truncate the final answer
-import math
+# assign num to user input to determine number of rows 
+num = int(input("Enter a number. \n >> "))
 
-# assign class1, 2, and 3 to input to take user input of number of students
-# in each respective class
-class1 = int(input("How many students are in the first class? "))
+count = 0
 
-# assign desk1 variable to the ceiling of the number of half the students 
-desk1 = math.ceil((class1)/2)
+# a bunch of math shit i don't feel like explaining
+for r in range(num + 1):
 
-# print number of desks needed for class 1
-print(desk1)
+    for c in range(count):
+        print(' ', end='')
+        
+    for c in range(num - count):
+        print('*', end='')
 
-class2 = int(input("How many students are in the second class? "))
+    if (count == num):
+        print("*",end='')
+    else:
+        print(' ',end='')    
 
-# assign desk2 variable to the ceiling of the number of half the students
-desk2 = math.ceil((class2)/2)
+    for c in range(num - count):
+        print('*', end='')
+    
+    print()
 
-# print number of desks needed for class 2
-print(desk2)
+    
+    count = count + 1
 
-class3 = int(input("How many students are in the third class? "))
+num2 = int(input("Enter a number. \n >> "))
 
-# assign desk3 variable to the ceiling of the number of half the students 
-desk3 = math.ceil((class3)/2)
 
-# print number of desks needed for class 3 
-print(desk3)
+count2 = 1
+for r in range(num2 + 1):
+    for c in range(1,count2):
+        print(c, end='')
+    print()
+    count2 = count2 + 1
 
-# assign desk_total to the sum of all the class desks
-desk_total = (desk1 + desk2 + desk3)
-
-# print the total number of desks needed for all three classes
-print(desk_total)
-
+        
 
 '''
 IDLE Output
-How many students are in the first class? 20
-10
-How many students are in the second class? 21
-11
-How many students are in the third class? 22
-11
-32
+Enter a number: 5
+***** *****
+ **** ****
+  *** ***
+   ** **
+    * *
+     *
+Enter a number: 5
+
+1
+12
+123
+1234
+12345
 '''

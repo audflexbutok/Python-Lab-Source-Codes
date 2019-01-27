@@ -1,30 +1,71 @@
 # Programmer: Audrey Cooper
 # Lab Section: 502
-# Lab 2, assignment 5
-# Purpose: to determine whether a number is divisible by 2 or not by using the
-# modulus operator
+# Lab 3, assignment 5
+# Purpose: To get the computer to "guess" the number that the user is thinking of.
 
-# utilize a while loop to iterate though user input while 1 is true
-while(1):
-    # assign num variable to a user input 
-    num = int(input("Enter a number that is divisible by 2 please! "))
-    # use if statement to determine if number if divisible by 2
-    # modulus operator is used to determine if the remainder is 0
-    if (num%2 == 0):
-        # print success result statements
-        print("Good job!")
-        # break from loop once requirement is met
+# initial print statement to start game
+print("My guess is 50.")
+
+# instantiate variable guess and assign it to 50
+guess = 50
+
+# instantiate variable game and assign it to True to keep the while loop running
+game = True
+
+# utilize while loop to continuously iterate until the computer guesses correctly
+while game == True:
+    
+    # instantiate variable correct and assign it to user input
+    correct = str(input("Is that guess too high or too low? (Type high or low, or correct.) \n >> "))
+    if (correct) == "correct":
         break
-    # else condition if mod 2 does not equal 0
     else:
-        # print failed result statements
-        print("You fool!")
+        
+        # if statement to compare user input to computer guess
+        if correct == ("high"):
+            
+            # reassign and decrement guess value
+            (guess) = (guess - 1)
+
+            # print new guess
+            print(guess)
+            
+        elif correct == ("low"):
+            # reassign and increment guess value
+            (guess) = (guess + 1)
+
+            # print new guess
+            print(guess)
 
 '''
 IDLE Output
-Enter a number that is divisible by 2 please! 5
-You fool!
-Enter a number that is divisible by 2 please! 6
-Good job!
+My guess is 50.
+Is that guess too high or too low? (Type high or low, or correct.)
+>> high
+49
+Is that guess too high or too low? (Type high or low, or correct.)
+>> high
+48
+Is that guess too high or too low? (Type high or low, or correct.)
+>> high
+47
+Is that guess too high or too low? (Type high or low, or correct.)
+>> low
+48
+Is that guess too high or too low? (Type high or low, or correct.)
+>> low
+49
+Is that guess too high or too low? (Type high or low, or correct.)
+>> correct
 '''
 
+
+
+              
+                  
+        
+                  
+                  
+        
+    
+    
