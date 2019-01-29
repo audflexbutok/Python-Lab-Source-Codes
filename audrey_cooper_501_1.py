@@ -8,7 +8,7 @@ num = int(input("Enter a number. \n >> "))
 
 count = 0
 
-# a bunch of math shit i don't feel like explaining
+# a bunch of math stuff i don't feel like explaining
 for r in range(num + 1):
 
     for c in range(count):
