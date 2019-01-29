@@ -1,7 +1,7 @@
 # Programmer: Audrey Cooper
 # Lab Section: 502
 # Lab 3, assignment 1
-# Purpose: To use nested loops to draw a pyrimid with asterisks
+# Purpose: To use nested loops to draw a pyrimid with asterisks.
 
 # assign num to user input to determine number of rows 
 num = int(input("Enter a number. \n >> "))
